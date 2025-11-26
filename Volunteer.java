@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.*;//to easily import the list class
 
 //the class is used to store the people who have registered as volunteers and the information about the documents that the volunteer has
 //it makes a list to store the data and also to get and sort the data
@@ -14,20 +14,20 @@ public class Volunteer extends User {
 
     //adds the document to the list of documents
     public void addDocument(Document doc) {
-        documents.add(doc);
+        documents.add(doc);//adds the document to the list of documents using the value given which is doc
     }
 
     //adds the application to the list of applications
     public void addApplication(Application app) {
-        applications.add(app);
+        applications.add(app);//adds the application to the list of applications using the value given which is app
     }
 
-    //getters for the documents
+    //getters for the documents list
     public List<Document> getDocuments() {
         return List.copyOf(documents);
     }
 
-    //getters for the applications
+    //getters for the applications list
     public List<Application> getApplications() {
         return List.copyOf(applications);
     }
@@ -41,7 +41,7 @@ public class Volunteer extends User {
     public Application getApplicationForTrip(String tripID) {
         return applications.stream()
             .filter(a -> a.getTrip().getTripID().equals(tripID))//uses lambda to filter out the applications that are not for the trip
-            .findFirst()
-            .orElse(null);
+            .findFirst()//finds the first application that is for the trip
+            .orElse(null);//if there is no application for the trip then return null
     }
 }

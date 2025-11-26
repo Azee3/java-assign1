@@ -1,14 +1,16 @@
 import java.time.LocalDate;//to easily import the LocalDate class
 
+    //in this class it will create the document class which will be used to store the information about the documents it confirms if the document 
+    //is valid to use and accepts other contrustors
+
 public class Document {
+    //the variables that will be used to store the information about the document
     private String type;
     private LocalDate expiry;
     private String imgPath;
 
-    //in this class it will create the document class which will be used to store the information about the documents it confirms if the document 
-    //is valid to use and accepts othercontrustors
-
-    public Document(String type, LocalDate expiry, String imgPath) {
+    public Document(String type, LocalDate expiry, String imgPath) {//the constructor will be created to make the documend class which the value will be present after the user
+                                                                    // the user inputted the information in crsconsole when the options is selected
         this.type = type;
         this.expiry = expiry;
         this.imgPath = imgPath;
